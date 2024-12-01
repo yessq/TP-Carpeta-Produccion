@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <style>
+        .slider {
+            margin: 50px auto;
+            width: 80%;
+        }
+
+        .slider div {
+            background: #38595a;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider div img {
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            background: rgba(35, 27, 141, 0.5);
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Slider de Contenido con Slick</h1>
+
+    <div class="slider">
+        <div>
+            <h2>Garfield</h2>
+            <img src="https://img.asmedia.epimg.net/resizer/v2/CNKEGVUENBAZHD6SZAAXXNVJPM.jpg?auth=1f8dd8bf8062aebe99a081f84df8a209b259816c24ea504458742da3f8c9a373&width=644&height=362&smart=true"
+                alt="imagen de Garfield">
+        </div>
+        <div>
+            <h2>Tom de Tom y Jerry</h2>
+            <img src="https://www.shutterstock.com/image-vector/tom-attacks-jerry-cartoon-characters-260nw-2424610351.jpg"
+                alt="Tom de Tom y Jerry">
+        </div>
+        <div>
+            <h2>Gato con botas</h2>
+            <img src="https://elcomercio.pe/resizer/v2/JAUTS7FKFNGG3G3K2HS4VLPMWI.jpg?auth=0ce4ee10cd78f23150785c954d50be9484d218645143bb72cfb3847eb105e9bc&width=1200&height=810&quality=90&smart=true"
+                alt="Imagen del gato con botas">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".slider").slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 800,
+                arrows: true,
+                dots: true,
+            });
+        });
+    </script>
+</body>
+
+</html>

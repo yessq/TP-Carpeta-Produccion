@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #lightbox img {
+            min-width: 90vw;
+            min-height: 90vh;
+            margin: 20;
+            border-radius: 10px;
+        }
+
+        #lightbox button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            background-color: rgb(141, 34, 34);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbwNJa8eUZ3NQXsqG2xyHlcjxCb1-3yOpzag&s"
+            alt="Image 1">
+        <img src="https://i.pinimg.com/736x/13/c3/53/13c353ccbdff4ec94940c6660ccb9780.jpg" alt="Image 2">
+    </div>
+
+    <div id="lightbox">
+        <button id="close">X</button>
+        <img src="" alt="Imagen ampliada">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".gallery img").click(function () {
+                const imgSrc = $(this).attr("src");
+                $("#lightbox img").attr("src", imgSrc);
+                $("#lightbox").fadeIn();
+            });
+
+            $("#close").click(function () {
+                $("#lightbox").fadeOut();
+            });
+
+            $("#lightbox").click(function (e) {
+                if (e.target.id === "lightbox") {
+                    $(this).fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

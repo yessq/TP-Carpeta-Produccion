@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(154, 154, 189);
+            margin: 0;
+        }
+        #content{
+            display: flex;
+        }
+        #sidebar{
+            background-color: rgb(99, 90, 76);
+            height: 80vw;
+            width: 10vw;
+        }
+
+        #columns{
+            display: flex;
+            width: 90vw;
+            flex-wrap: wrap;
+        }
+
+        #navbar{
+            width: 100vw;
+            padding: 10px;
+            background-color: rgb(55, 50, 109);
+            color: white;
+        }
+
+        .column{
+            width: 45vw;
+            background-color: rgb(197, 186, 171);
+        }
+
+        @media (orientation: landscape){
+            #navbar{
+                display: none;
+            }
+        }
+        @media (orientation: portrait){
+            #sidebar{
+                display: none;
+            }
+        }
+        @media (max-width: 600px){
+            #content .column{
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 768px){
+            #columns{
+                width: 100vw;
+                flex-direction:column;
+            }
+            .column{
+                padding: 10px;
+                width: 100vw;
+            }
+        }   
+
+        @media (min-width: 960px){
+            body{
+                background-color: rgb(92, 92, 113);
+            }
+        }
+        @media (min-width: 1200px){
+            .column{
+                margin: 10px;
+                width: 40vw;
+            }
+        }
+        @media (max-width: 576px) {
+            h1 {
+                font-family: sans-serif;
+            }
+        }
+
+        @media (max-width: 480px){
+            img{
+                width: 80vw;
+                margin: 10px;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <div id="navbar">Barra de Navegación</div>
+    <section id="content">
+        <div id="sidebar">
+            <p>Sidebar</p>
+        </div>
+        <div id="columns">
+            <div class="column">Columna 1</div>
+            <div class="column">Columna 2</div> 
+        </div>        
+    </section>
+    <img src="https://marcainteligente.com/wp-content/smush-webp/2024/05/Los-Minions-en-diferentes-escenarios-de-Despicable-Me-600x336.png.webp" alt="">
+
+    
+</body>
+</html>

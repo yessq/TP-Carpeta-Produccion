@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numMayor;
+      let numMenor;
+
+      for (let i = 0; i < 5; i++) {
+        const numero = prompt(
+          "Ingresar 5 numeros. Te falta ingresar " + (5 - i)
+        );
+
+        if (i == 0) {
+          numMayor = numero;
+          numMenor = numero;
+        }
+
+        if (numero > numMayor) numMayor = numero;
+        if (numero < numMenor) numMenor = numero;
+      }
+
+      alert("Número menor es  " + numMenor + " y número mayor es " + numMayor);
+    </script>
+  </body>
+</html>

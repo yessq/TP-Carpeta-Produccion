@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel con Gatitos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        .owl-carousel .item {
+            position: relative;
+            text-align: center;
+            background: #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .owl-carousel .item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Carrusel de Gatitos con Owl Carousel</h1>
+    <div class="owl-carousel">
+        <div class="item"><img
+                src="https://media.tiempodesanjuan.com/p/ff21dd1b8cd966f49cdb772a4b3ff8e1/adjuntos/331/imagenes/000/103/0000103271/790x0/smart/582252jpg.jpg"
+                alt="Slide 1"></div>
+        <div class="item"><img
+                src="https://www.elpais.com.co/resizer/v2/ES4YNNALTVAY3I5RENIXL5WIQI.jpg?auth=22d0e38278a81bd2c335399348f7d6c1d3598aef096b97ea2a87f639faf90233&smart=true&quality=75&width=1280&height=720"
+                alt="Slide 2"></div>
+        <div class="item"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLkRNyltShz6JCNdMLZ9-QLFvdhuYcDTwRgQ&s0"
+                alt="Slide 3"></div>
+        <div class="item"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgwcmsnuQJ08KxnFQE8H7iCJat30QLrWXR-A&s"
+                alt="Slide 4"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 800,
+            });
+        });
+    </script>
+</body>
+
+</html>

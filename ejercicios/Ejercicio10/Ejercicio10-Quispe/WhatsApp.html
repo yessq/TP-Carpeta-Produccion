@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace a WhatsApp</title>
+    <style>
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebc57;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="whatsapp-button">Chat en WhatsApp</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        (function ($) {
+
+            $.fn.whatsappLink = function () {
+                let settings = {
+                    phone: "123456789",
+                    text: "Hola, buenos días.",
+                };
+
+                return this.each(function () {
+                    const link = `https://wa.me/${settings.phone}?text=${encodeURIComponent(settings.text)}`;
+                    $(this).click(function () {
+                        window.open(link, "_blank");
+                    });
+                });
+            };
+        })(jQuery);
+
+        $(document).ready(function () {
+            $(".whatsapp-button").whatsappLink();
+        });
+    </script>
+</body>
+
+</html>

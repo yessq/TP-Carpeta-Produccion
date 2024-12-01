@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    width: 50%;
+}
+
+h1, h2  {
+    color: #1f85de;
+}
+
+h3 {
+color:#ff9e20
+}
+
+.presentacion {
+    color: #de2f24;
+    font-size: 16px;
+}
+
+.objetivos {
+    color: #ff2e00; 
+    font-size: 16px;
+   
+}
+
+.titulo {
+    color: #4196e4; 
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    color:#1f85de;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Descripción de las carreras */
+.descripcion1 {
+    color: #e3aed4b8; 
+    font-size: 16px;
+}
+.descripcion2 {
+    color: #d844ae; 
+    font-size: 16px;
+}
+
+.desc_multimedial {
+    color: #2fd75c;
+}
+
+.desc_diseño {
+    color: #d887a2; 
+}
+
+.descripcion:nth-of-type(4) {
+    color: #2e8b57; 
+}
